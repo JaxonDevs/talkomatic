@@ -8,6 +8,23 @@ Talkomatic is a modern revival of the pioneering chat system originally created 
 [![Website](https://img.shields.io/badge/Website-talkomatic.co-green?style=flat-square&logo=web)](https://www.talkomatic.co)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
 
+## Social Channels
+
+Stay connected with the Talkomatic community:
+
+[![Instagram](https://img.shields.io/badge/Instagram-@talkomaticofficial-E4405F?style=flat-square&logo=instagram)](https://www.instagram.com/talkomaticofficial/)
+[![Reddit](https://img.shields.io/badge/Reddit-r%2Ftalkomatic-FF4500?style=flat-square&logo=reddit)](https://www.reddit.com/r/talkomatic/)
+[![Twitter](https://img.shields.io/badge/Twitter-@talkomatic__co-1DA1F2?style=flat-square&logo=twitter)](https://twitter.com/talkomatic_co)
+[![Discord](https://img.shields.io/badge/Discord-Join%20our%20server-7289DA?style=flat-square&logo=discord)](https://discord.com/invite/AY7Bk6zgze)
+
+## Support Talkomatic
+
+**Talkomatic is a small, independent social network, funded by your donations.** We run without ads to provide a free and open chat experience. If you enjoy using Talkomatic, please consider supporting our project:
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/donate/?hosted_button_id=2NP6ZRM7NBFP2)
+
+Your support helps keep Talkomatic running and improving. Thank you!
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -19,10 +36,11 @@ Talkomatic is a modern revival of the pioneering chat system originally created 
 - [Social Channels](#social-channels)
 - [License](#license)
 - [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
 ## Overview
 
-Talkomatic, a pioneering computer-based chat system, was originally developed in 1973 by Doug Brown and David R. Woolley at the University of Illinois as part of the PLATO system. In 2024, software developer [Mohd Mahmodi](https://twitter.com/mohdmahmodi) rebuilt the web version of Talkomatic, introducing modern features and improvements while preserving its innovative spirit.
+Talkomatic, a pioneering computer-based chat system, was originally developed in 1973 by Doug Brown and David R. Woolley at the University of Illinois as part of the PLATO system. In June 2024, [Mohd Mahmodi](https://twitter.com/mohdmahmodi) rebuilt the web version of Talkomatic, introducing modern features and improvements while preserving its innovative spirit.
 
 This revival project was initiated with several key objectives:
 
@@ -105,15 +123,6 @@ We welcome contributions! To contribute:
 
 Please read our [Contributing Guidelines](CONTRIBUTING.md) for more details.
 
-## Social Channels
-
-Stay connected with the Talkomatic community:
-
-[![Instagram](https://img.shields.io/badge/Instagram-@talkomaticofficial-E4405F?style=flat-square&logo=instagram)](https://www.instagram.com/talkomaticofficial/)
-[![Reddit](https://img.shields.io/badge/Reddit-r%2Ftalkomatic-FF4500?style=flat-square&logo=reddit)](https://www.reddit.com/r/talkomatic/)
-[![Twitter](https://img.shields.io/badge/Twitter-@talkomatic__co-1DA1F2?style=flat-square&logo=twitter)](https://twitter.com/talkomatic_co)
-[![Discord](https://img.shields.io/badge/Discord-Join%20our%20server-7289DA?style=flat-square&logo=discord)](https://discord.com/invite/AY7Bk6zgze)
-
 ## License
 
 Talkomatic is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
@@ -128,6 +137,19 @@ We value your input! For questions, feedback, or just to chat, connect with us o
 [![Discord](https://img.shields.io/badge/Discord-Join%20our%20server-7289DA?style=flat-square&logo=discord)](https://discord.com/invite/AY7Bk6zgze)
 
 Your thoughts help shape Talkomatic's future. We look forward to hearing from you!
+
+## Acknowledgements
+
+We would like to express our sincere gratitude to all the contributors who have helped make Talkomatic what it is today. Your time, effort, and expertise have been invaluable in improving and maintaining this project. Whether you've submitted code, reported bugs, suggested features, or helped with documentation, your contributions are deeply appreciated.
+
+A special thank you to:
+
+- All our open-source contributors
+- Our dedicated moderators
+- The supportive Talkomatic community
+- Everyone who has donated to keep Talkomatic running
+
+Your support and involvement make Talkomatic possible. Thank you for being part of this journey!
 
 ---
 
