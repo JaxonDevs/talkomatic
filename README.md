@@ -40,7 +40,7 @@ Your support helps keep Talkomatic running and improving. Thank you!
 
 ## Overview
 
-Talkomatic, a pioneering computer-based chat system, was originally developed in 1973 by Doug Brown and David R. Woolley at the University of Illinois as part of the PLATO system. In 2024, software developer [Mohd Mahmodi](https://twitter.com/mohdmahmodi) rebuilt the web version of Talkomatic, introducing modern features and improvements while preserving its innovative spirit.
+Talkomatic, a pioneering computer-based chat system, was originally developed in 1973 by Doug Brown and David R. Woolley at the University of Illinois as part of the PLATO system. In June 2024, [Mohd Mahmodi](https://twitter.com/mohdmahmodi) rebuilt the web version of Talkomatic, introducing modern features and improvements while preserving its innovative spirit.
 
 This revival project was initiated with several key objectives:
 
