@@ -189,6 +189,7 @@ io.on('connection', (socket) => {
 
     socket.on('joinRoom', (data) => {
         const { roomId, username, location, userId, color, avatar } = data;
+        console.log(socket.handshake.address+" : "+username);
     
         if (!roomId || !username || !location || !userId) {
             socket.emit('error', 'Invalid input');
