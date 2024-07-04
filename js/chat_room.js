@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     document.getElementById('layoutButton').addEventListener('click', switchLayout);
 
-    function addUserToRoom(user) {
+   function addUserToRoom(user) {
         const userElement = document.createElement('div');
         userElement.id = `user-${user.userId}`;
         userElement.className = 'user-container';

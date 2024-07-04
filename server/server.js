@@ -7,6 +7,7 @@ const rateLimit = require('express-rate-limit');
 const compression = require('compression');
 const helmet = require('helmet');
 const bodyParser = require('body-parser');
+const crypto = require('crypto');
 const OFFENSIVE_WORDS = require('../js/offensiveWords.js');
 
 const app = express();
@@ -24,8 +25,12 @@ const birthdayCelebrated = new Map();
 const MAX_CHAR_LENGTH = 20;
 
 // Define allowed moderators
-
 const allowedMods = ['user_j369j5gkz','Drew','user_cc7r68nu0','user_dcxw68lsx','GPT4All','SomeGuy','user_pl43x2vca','user_1csrwjjd7','user_030skg48h','user_f379qlasz','user_nict8jm8e','user_7zl2kndsl']; // Add more user IDs as needed
+
+// Function to generate a hash of the userId
+function hashUserId(userId) {
+  return crypto.createHash('sha256').update(userId).digest('hex');
+}
 
 
 app.use(express.static(path.join(__dirname, '../')));
@@ -104,17 +109,18 @@ function containsOffensiveContent(text) {
 
 io.on('connection', (socket) => {
     socket.on('userConnected', (data) => {
-        const { userId } = data;
-        if (isUserBanned(userId)) {
-            socket.emit('userBanned', getBanExpiration(userId));
-            return;
-        }
-
-        socket.userId = userId;
-        socket.modMode = allowedMods.includes(userId);
-        activeUsers.add(userId);
-        updateCounts();
-        sendRandomRooms(socket);
+      const { userId } = data;
+      const hashedUserId = hashUserId(userId);
+      if (isUserBanned(hashedUserId)) {
+        socket.emit('userBanned', getBanExpiration(hashedUserId));
+        return;
+      }
+  
+      socket.userId = hashedUserId;
+      socket.modMode = allowedMods.includes(userId);
+      activeUsers.add(hashedUserId);
+      updateCounts();
+      sendRandomRooms(socket);
     });
 
     socket.on('searchRoom', (roomId) => {
@@ -189,7 +195,7 @@ io.on('connection', (socket) => {
 
     socket.on('joinRoom', (data) => {
         const { roomId, username, location, userId, color, avatar } = data;
-        console.log(socket.handshake.address+" : "+username);
+        const hashedUserId = hashUserId(userId);
     
         if (!roomId || !username || !location || !userId) {
             socket.emit('error', 'Invalid input');
@@ -472,19 +478,19 @@ function generateRoomId() {
     return Math.floor(100000 + Math.random() * 900000).toString();
 }
 
-function isUserBanned(userId) {
-    if (!bannedUsers.has(userId)) return false;
-    const banExpiration = bannedUsers.get(userId);
+function isUserBanned(hashedUserId) {
+    if (!bannedUsers.has(hashedUserId)) return false;
+    const banExpiration = bannedUsers.get(hashedUserId);
     if (Date.now() > banExpiration) {
-        bannedUsers.delete(userId);
-        return false;
+      bannedUsers.delete(hashedUserId);
+      return false;
     }
     return true;
-}
-
-function getBanExpiration(userId) {
-    return bannedUsers.get(userId);
-}
+  }
+  
+  function getBanExpiration(hashedUserId) {
+    return bannedUsers.get(hashedUserId);
+  }
 
 function isBirthdayMessage(message) {
     const birthdayPhrases = [
